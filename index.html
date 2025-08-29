@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Game Center</h1>
+  </header>
+  <section class="hero">
+    <div class="hero-card">
+      <h2>Welcome to Game Center</h2>
+      <p>Play, connect, and discover.</p>
+    </div>
+  </section>
+  <section class="games-section">
+    <h2 class="section-title">Your Games</h2>
+    <div class="games-grid">
+      <a class="game-card" href="#">
+        <div class="game-thumb">🎮</div>
+        <h2>Game 1</h2>
+      </a>
+      <a class="game-card" href="#">
+        <div class="game-thumb">🔥</div>
+        <h2>Game 2</h2>
+      </a>
+      <a class="game-card" href="#">
+        <div class="game-thumb">🚀</div>
+        <h2>Game 3</h2>
+      </a>
+    </div>
+  </section>
+  <nav class="bottom-nav">
+    <a href="#"><span class="icon">🏠</span><span class="label">Home</span></a>
+    <a href="#"><span class="icon">🕹️</span><span class="label">Arcade</span></a>
+    <a href="#"><span class="icon">🤝</span><span class="label">Play</span></a>
+    <a href="#"><span class="icon">📚</span><span class="label">Library</span></a>
+  </nav>
+  <script>
+    function setDeviceClass() {
+      const desktop = window.matchMedia('(min-width: 768px)').matches;
+      document.body.classList.toggle('desktop', desktop);
+    }
+    window.addEventListener('resize', setDeviceClass);
+    setDeviceClass();
+  </script>
+</body>
+</html>

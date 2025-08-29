@@ -1,0 +1,10 @@
+{
+  "name": "game-center",
+  "version": "0.1.0",
+  "description": "Sleek game hub with dark, glassy design.",
+  "scripts": {
+    "test": "node test.js",
+    "start": "npx http-server -c-1"
+  },
+  "license": "MIT"
+}

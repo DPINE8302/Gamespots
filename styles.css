@@ -1,75 +1,157 @@
-:root {
-  --bg: #0d0d0f;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --accent: #00e0ff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--bg);
-  color: #fff;
-  font-family: system-ui, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-header {
-  text-align: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  flex: 1;
-}
-
-.game-card {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: var(--card-bg);
-  border-radius: 1rem;
-  padding: 1rem;
-  min-height: 160px;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-.game-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 0 15px var(--accent);
-}
-
-.game-card h2 {
-  z-index: 1;
-  font-size: 1rem;
-}
-
-.game-thumb {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: var(--accent);
-  opacity: 0.1;
-}
++:root {
++  --bg: #0d0d0f;
++  --card-bg: rgba(255, 255, 255, 0.05);
++  --accent: #00e0ff;
++}
++
++* {
++  box-sizing: border-box;
++  margin: 0;
++  padding: 0;
++}
++
++body {
++  background: var(--bg);
++  color: #fff;
++  font-family: system-ui, sans-serif;
++  min-height: 100vh;
++  display: flex;
++  flex-direction: column;
++}
++
++.app-header {
++  text-align: center;
++  padding: 1rem;
++  background: rgba(255, 255, 255, 0.05);
++  backdrop-filter: blur(10px);
++  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
++}
++
++.games-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
++  gap: 1rem;
++  flex: 1;
++}
++
++.game-card {
++  position: relative;
++  display: flex;
++  align-items: flex-end;
++  justify-content: center;
++  background: var(--card-bg);
++  border-radius: 1rem;
++  padding: 1rem;
++  min-height: 160px;
++  text-decoration: none;
++  color: inherit;
++  overflow: hidden;
++  backdrop-filter: blur(10px);
++  border: 1px solid rgba(255, 255, 255, 0.1);
++  transition: transform 0.2s, border-color 0.2s;
++}
++
++.game-card:hover {
++  transform: translateY(-4px);
++  border-color: var(--accent);
++  box-shadow: 0 0 15px var(--accent);
++}
++
++.game-card h2 {
++  z-index: 1;
++  font-size: 1rem;
++}
++
++.game-thumb {
++  position: absolute;
++  inset: 0;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 2.5rem;
++  color: var(--accent);
++  opacity: 0.1;
++}
++
++.hero {
++  padding: 1rem;
++}
++
++.hero-card {
++  background: linear-gradient(135deg, var(--accent), #ff0099);
++  border-radius: 1.5rem;
++  padding: 2rem;
++  text-align: center;
++  margin: 0 0 1rem;
++  color: #fff;
++}
++
++.hero-card h2 {
++  font-size: 1.5rem;
++  margin-bottom: 0.5rem;
++}
++
++.games-section {
++  padding: 0 1rem 4rem;
++}
++
++.section-title {
++  margin-bottom: 0.5rem;
++  font-size: 1.1rem;
++}
++
++.bottom-nav {
++  position: fixed;
++  bottom: 0;
++  left: 0;
++  right: 0;
++  background: rgba(255, 255, 255, 0.05);
++  backdrop-filter: blur(10px);
++  display: flex;
++  justify-content: space-around;
++  padding: 0.5rem 0;
++  border-top: 1px solid rgba(255, 255, 255, 0.1);
++}
++
++.bottom-nav a {
++  color: #fff;
++  text-decoration: none;
++  font-size: 0.75rem;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  gap: 0.25rem;
++}
++
++.bottom-nav .icon {
++  font-size: 1.2rem;
++}
++
++body.desktop .bottom-nav {
++  top: 0;
++  bottom: 0;
++  width: 80px;
++  flex-direction: column;
++  justify-content: flex-start;
++  padding-top: 1rem;
++  border-top: none;
++  border-right: 1px solid rgba(255, 255, 255, 0.1);
++}
++
++body.desktop .bottom-nav a {
++  padding: 1rem 0;
++}
++
++body.desktop .app-header,
++body.desktop .hero,
++body.desktop .games-section {
++  margin-left: 80px;
++}
++
++body.desktop .games-section {
++  padding-bottom: 1rem;
++}
++
++body.desktop .games-grid {
++  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
++}
